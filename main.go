@@ -10,9 +10,9 @@ import (
 func main() {
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "")
+		return c.String(http.StatusOK, "💩")
 	})
-	addr := ":8989"
+	addr := ":8080"
 	if port := os.Getenv("PORT"); port != "" {
 		addr = ":" + port
 	}

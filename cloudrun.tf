@@ -29,7 +29,7 @@ variable "service" {
 provider "ko" {}
 
 resource "ko_build" "example" {
-  importpath = "github.com/ko-build/terraform-provider-ko/cmd/test"
+  importpath = "."
 }
 
 resource "google_cloud_run_service" "default" {
