@@ -10,6 +10,13 @@ import (
 func main() {
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
+		if c.Request().Header.Get("accept") == "application/json" {
+			return c.JSON(http.StatusOK, struct {
+				Content string `json:"content"`
+			}{
+				Content: "💩",
+			})
+		}
 		return c.String(http.StatusOK, "💩")
 	})
 	addr := ":8080"

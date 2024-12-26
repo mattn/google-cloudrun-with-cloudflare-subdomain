@@ -3,3 +3,5 @@ terraform.tfstate.backup
 terraform.tfvars
 .terraform/
 .terraform.lock.hcl
+example-go
+example-go.exe
